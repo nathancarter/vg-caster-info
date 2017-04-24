@@ -6,6 +6,10 @@ A quick-refernce webpage for amateur shoutcasters for the game [Vainglory](http:
 The web page lets you drag and drop names of heroes to form teams, and those teams contain very simple
 reference information on each hero (name of heroic perk, A, B, and C abilities).
 
+[Try it out online now.](https://nathancarter.github.io/vg-caster-info/)
+
+<hr>
+
 This site is built on a template from [Start Bootstrap](http://startbootstrap.com/),
 called [SB Admin](http://startbootstrap.com/template-overviews/sb-admin/).
 
