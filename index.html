@@ -100,6 +100,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/tether/tether.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="hero-data.js"></script>
 
     <script>
         function heroOnTeam ( isLeft, heroName ) {
@@ -137,6 +138,7 @@
             event.preventDefault();
         }
         function createHeroElement ( heroName ) {
+            var data = VaingloryHeroData[heroName];
             var lc = heroName.toLowerCase();
             var result = document.createElement( 'div' );
             result.setAttribute( 'class', 'col-xl-12 col-sm-12 card' );
@@ -154,22 +156,22 @@
               + '    <tr><td align="right">'
               + '        <p>Perk: &nbsp;</p>'
               + '    </td><td>'
-              + '        <p>...</p>'
+              + '        <p>' + data.Perk + '</p>'
               + '    </td></tr>'
               + '    <tr><td align="right">'
               + '        <p>A: &nbsp;</p>'
               + '    </td><td>'
-              + '        <p>...</p>'
+              + '        <p>' + data.A + '</p>'
               + '    </td></tr>'
               + '    <tr><td align="right">'
               + '        <p>B: &nbsp;</p>'
               + '    </td><td>'
-              + '        <p>...</p>'
+              + '        <p>' + data.B + '</p>'
               + '    </td></tr>'
               + '    <tr><td align="right">'
               + '        <p>C: &nbsp;</p>'
               + '    </td><td>'
-              + '        <p>...</p>'
+              + '        <p>' + data.C + '</p>'
               + '    </td></tr>'
               + '</table>';
             return result;
@@ -184,12 +186,9 @@
             element.innerHTML = '<a class="nav-link" draggable="true" ondragstart="handleDrag(event);">' + heroName + '</a>';
             document.getElementById( 'leftNavBar' ).appendChild( element );
         }
-        addHeroToNav( 'Adagio' );
-        addHeroToNav( 'Blackfeather' );
-        addHeroToNav( 'Grumpjaw' );
-        addHeroToNav( 'Lyra' );
-        addHeroToNav( 'Phinn' );
-        addHeroToNav( 'Skye' );
+        var heroNames = Object.keys( VaingloryHeroData );
+        heroNames.sort();
+        for ( var i = 0 ; i < heroNames.length ; i++ ) addHeroToNav( heroNames[i] );
     </script>
 </body>
 
