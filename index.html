@@ -1,106 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Quick reference sheet for Vainglory shoutcasters">
+    <meta name="author" content="Nathan Carter">
     <title>Vainglory Caster Info</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-    <style>
-        .mars {
-            margin: 1em;
-        }
-        .pads {
-            padding: 1em;
-        }
-    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+    <script src="hero-data.js"></script>
+    <script src="bootstrap-dropdown.js"></script>
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav id="mainNav" class="navbar static-top navbar-toggleable-md navbar-inverse bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="https://github.com/nathancarter/vg-caster-info">Vainglory Caster Info</a>
-        <div class="collapse navbar-collapse" id="navbarExample">
-            <ul class="sidebar-nav navbar-nav" id="leftNavBar">
-            </ul>
-        </div>
-    </nav>
-
-    <div class="content-wrapper py-3">
-
+    <div class="content-wrapper">
         <div class="container-fluid">
-
-            <!-- Icon Cards -->
             <div class="row">
-                <div class="col-xl-6 col-sm-6">
-                    <div class="card card-inverse card-primary o-hidden h-100" id="leftHeader"
+                <div class="col-xl-12 col-sm-12">
+                    <h1><a class="navbar-brand" href="https://github.com/nathancarter/vg-caster-info">Vainglory Caster Info</a></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-sm-6" id="leftContainer">
+                    <div class="panel panel-info" id="leftHeader"
+                         style="text-align: center; background: #000099;"
                          ondrop="handleDrop(event);" ondragover="handleDragOver(event);">
-                        <div class="card-block">
-                            <div class="mr-5" style="text-align: center;">
-                                <h2>Left/Blue Team</h2>
-                                <p class="instructions">(Drag heroes here to add)</p>
-                            </div>
+                        <h2>Left/Blue Team</h2>
+                        <div class="btn-group" id="addToLeftTeam" style="margin-bottom: 1em;">
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Add hero <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" id="leftChoices">
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 col-sm-6">
-                    <div class="card card-inverse card-danger o-hidden h-100" id="rightHeader"
+                <div class="col-xl-6 col-sm-6" id="rightContainer">
+                    <div class="panel panel-danger" id="rightHeader"
+                         style="text-align: center; background: #990000;"
                          ondrop="handleDrop(event);" ondragover="handleDragOver(event);">
-                        <div class="card-block">
-                            <div class="mr-5" style="text-align: center;">
-                                <h2>Right/Red Team</h2>
-                                <p class="instructions">(Drag heroes here to add)</p>
-                            </div>
+                        <h2>Right/Red Team</h2>
+                        <div class="btn-group" id="addToRightTeam" style="margin-bottom: 1em;">
+                            <button type="button" class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Add hero <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" id="rightChoices">
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
-
-                <div class="col-xl-6 col-sm-6 pads" id="leftTeam">
-
-                </div>
-
-                <div class="col-xl-6 col-sm-6 pads" id="rightTeam">
-
-                </div>
-
-            </div>
-
         </div>
-        <!-- /.container-fluid -->
-
     </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/tether/tether.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="hero-data.js"></script>
 
     <script>
         window.mobileAndTabletCheck = function() {
@@ -118,54 +82,50 @@
             }
         }
         function heroOnTeam ( isLeft, heroName ) {
-            var team = document.getElementById( isLeft ? 'leftTeam' : 'rightTeam' );
+            var team = document.getElementById( isLeft ? 'leftContainer' : 'rightContainer' );
             for ( var i = 0 ; i < team.childNodes.length ; i++ )
-                if ( ( team.childNodes[i] instanceof HTMLElement ) && ( team.childNodes[i].getAttribute( 'data-hero' ) == heroName ) )
+                if ( ( team.childNodes[i] instanceof HTMLElement )
+                  && ( team.childNodes[i].getAttribute( 'data-hero' ) == heroName ) )
                     return team.childNodes[i];
         }
         function teamSize ( isLeft ) {
-            var team = document.getElementById( isLeft ? 'leftTeam' : 'rightTeam' );
+            var team = document.getElementById( isLeft ? 'leftContainer' : 'rightContainer' );
             var count = 0;
             for ( var i = 0 ; i < team.childNodes.length ; i++ )
-                if ( ( team.childNodes[i] instanceof HTMLElement ) && team.childNodes[i].getAttribute( 'data-hero' ) )
+                if ( ( team.childNodes[i] instanceof HTMLElement )
+                  && team.childNodes[i].getAttribute( 'data-hero' ) )
                     count++;
             return count;
-        }
-        function handleDrag ( event ) {
-            event.dataTransfer.setData( 'text/plain', event.target.textContent.trim() );
-            event.dataTransfer.dropEffect = 'copy';
         }
         function descendsFrom ( inner, outer ) {
             for ( var walk = inner ; walk ; walk = walk.parentNode )
                 if ( walk == outer ) return true;
             return false;
         }
-        function handleDrop ( event ) {
+        function addHero ( isLeft, heroName, event ) {
             event.preventDefault();
-            var heroName = event.dataTransfer.getData( 'text/plain' );
             var heroCard = createHeroElement( heroName );
-            var isLeft = descendsFrom( event.target, document.getElementById( 'leftHeader' ) );
             if ( !heroOnTeam( isLeft, heroName ) && ( teamSize( isLeft ) < 3 ) )
-                document.getElementById( isLeft ? 'leftTeam' : 'rightTeam' ).appendChild( heroCard );
-        }
-        function handleDragOver ( event ) {
-            event.preventDefault();
+                document.getElementById( isLeft ? 'leftContainer' : 'rightContainer' )
+                    .appendChild( heroCard );
         }
         function createHeroElement ( heroName ) {
             var data = VaingloryHeroData[heroName];
             var lc = heroName.toLowerCase();
             var result = document.createElement( 'div' );
-            result.setAttribute( 'class', 'col-xl-12 col-sm-12 card' );
+            result.setAttribute( 'class', 'panel' );
+            result.style.padding = '1em';
             result.setAttribute( 'data-hero', heroName );
             result.innerHTML =
                 '<table width="100%" border=0>'
-              + '    <tr><td width="30%" rowspan=5>'
-              + '        <img class="mars" src="http://www.vaingloryfire.com/images/wikibase/icon/heroes/' + lc + '.png">'
+              + '    <tr><td width="120" rowspan=5>'
+              + '        <img width="120" height="120" class="mars" src="http://www.vaingloryfire.com/images/wikibase/icon/heroes/' + lc + '.png">'
               + '        <p align="center">' + heroName + '</p>'
-              + '    </td><td width="20%">'
+              + '    </td><td width="120">'
               + '        &nbsp;'
-              + '    </td><td width="50%" align="right">'
-              + '        <span onclick="handleClose(event,\'' + heroName + '\');">X</span>'
+              + '    </td><td align="right">'
+              + '        <button type="button" class="btn btn-default" '
+              + '                onclick="handleClose(event,\'' + heroName + '\');">&#x2573;</button>'
               + '    </td></tr>'
               + '    <tr><td align="right">'
               + '        <p>Perk: &nbsp;</p>'
@@ -191,30 +151,20 @@
             return result;
         }
         function handleClose ( event, heroName ) {
-            var isLeft = descendsFrom( event.target, document.getElementById( 'leftTeam' ) );
-            if ( heroCard = heroOnTeam ( isLeft, heroName ) ) heroCard.parentNode.removeChild( heroCard );
-        }
-        var lastHeroClicked = null;
-        function handleClick ( heroName ) { lastHeroClicked = heroName; }
-        function handleTeamClick ( event ) {
-            event.preventDefault();
-            var heroName = lastHeroClicked;
-            if ( !heroName ) return;
-            var heroCard = createHeroElement( heroName );
-            var isLeft = descendsFrom( event.target, document.getElementById( 'leftHeader' ) );
-            if ( !heroOnTeam( isLeft, heroName ) && ( teamSize( isLeft ) < 3 ) )
-                document.getElementById( isLeft ? 'leftTeam' : 'rightTeam' ).appendChild( heroCard );
-        }
-        function addHeroToNav ( heroName ) {
-            var element = document.createElement( 'li' );
-            element.setAttribute( 'class', 'nav-item' );
-            element.innerHTML = '<a class="nav-link" draggable="true" ondragstart="handleDrag(event);"'
-                              + ' onclick="handleClick(\'' + heroName + '\');">' + heroName + '</a>';
-            document.getElementById( 'leftNavBar' ).appendChild( element );
+            var isLeft = descendsFrom( event.target, document.getElementById( 'leftContainer' ) );
+            if ( heroCard = heroOnTeam( isLeft, heroName ) ) heroCard.parentNode.removeChild( heroCard );
         }
         var heroNames = Object.keys( VaingloryHeroData );
         heroNames.sort();
-        for ( var i = 0 ; i < heroNames.length ; i++ ) addHeroToNav( heroNames[i] );
+        for ( var i = 0 ; i < heroNames.length ; i++ ) {
+            var html = '<a onclick="addHero(BOOL,\'' + heroNames[i] + '\',event);">' + heroNames[i] + '</a>';
+            var element = document.createElement( 'li' );
+            element.innerHTML = html.replace( 'BOOL', 'true' );
+            document.getElementById( 'leftChoices' ).appendChild( element );
+            element = document.createElement( 'li' );
+            element.innerHTML = html.replace( 'BOOL', 'false' );
+            document.getElementById( 'rightChoices' ).appendChild( element );
+        }
     </script>
 </body>
 

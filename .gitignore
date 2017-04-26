@@ -1,3 +1,4 @@
 node_modules
 *.swp
 *.xlsx
+.DS_Store
