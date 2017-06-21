@@ -10,6 +10,7 @@ window.VaingloryHeroData = {
     Flicker:{A:'Binding Light',B:'Fairy Dust',C:'Moon Cloak',Perk:'Willow Whisper'},
     Fortress:{A:'Truth of the Tooth',B:'Law of the Claw',C:'Attack of the Pack',Perk:'Packmates'},
     Glaive:{A:'Afterburn',B:'Twisted Stroke',C:'Bloodsong',Perk:'Hunt the Weak'},
+    Grace:{A:'Benediction',B:'Holy Nova',C:'Divine Intervention',Perk:'Retribution'},
     Grumpjaw:{A:'Grumpy',B:'Hangry',C:'Stuffed',Perk:'Living Armor'},
     Gwen:{A:'Buckshot Bonanza',B:'Skedaddle',C:'Aces High',Perk:'Boomstick'},
     Idris:{A:'Shroudstep',B:'Chakram',C:'Shimmer Strike',Perk:'Divergent Paths'},
