@@ -24,6 +24,7 @@ window.VaingloryHeroData = {
     Petal:{A:'Bramblebloom Seeds',B:'Trampoline',C:'Spontaneous Combustion',Perk:'Munions'},
     Phinn:{A:'Quibble',B:'Polite Company',C:'Forced Accord',Perk:'Unstoppable'},
     Reim:{A:'Winter Spire',B:'Chill Winds',C:'Valkyrie',Perk:'Frostguard'},
+    Reza:{A:'Scorcher',B:'Troublemaker',C:'Netherform Detonator',Perk:'Firestarter'},
     Ringo:{A:'Achilles Shot',B:'Twirling Silver',C:'Hellfire Brew',Perk:'Double Down'},
     Rona:{A:'Into the Fray',B:'Foesplitter',C:'Red Mist',Perk:'Berserkers\' Fury'},
     Samuel:{A:'Malice & Verdict',B:'Drifting Dark',C:'Oblivion',Perk:'Corrupted Genius'},
