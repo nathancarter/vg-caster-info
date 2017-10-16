@@ -7,6 +7,7 @@ window.VaingloryHeroData = {
     Blackfeather:{A:'Feint of Heart',B:'On Point',C:'Rose Offensive',Perk:'Heartthrob'},
     Catherine:{A:'Merciless Persuit',B:'Stormguard',C:'Blast Tremor',Perk:'Captain of the Guard'},
     Celeste:{A:'Heliogenesis',B:'Core Collapse',C:'Solar Storm',Perk:'Julia\'s Light'},
+    Churnwalker:{A:'Hook and Chain',B:'Torment',C:'Trespass',Perk:'Futility of Life'},
     Flicker:{A:'Binding Light',B:'Fairy Dust',C:'Moon Cloak',Perk:'Willow Whisper'},
     Fortress:{A:'Truth of the Tooth',B:'Law of the Claw',C:'Attack of the Pack',Perk:'Packmates'},
     Glaive:{A:'Afterburn',B:'Twisted Stroke',C:'Bloodsong',Perk:'Hunt the Weak'},
