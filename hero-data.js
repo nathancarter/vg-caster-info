@@ -20,6 +20,7 @@ window.VaingloryHeroData = {
     Koshka:{A:'Pouncy Fun',B:'Twirly Death',C:'Yummy Catnip Frenzy',Perk:'Bloodrush'},
     Krul:{A:'Dead Man\'s Rush',B:'Smite',C:'From Hell\'s Heart',Perk:'Shadows Empower Me'},
     Lance:{A:'Impale',B:'Gythian wall',C:'Combat Roll',Perk:'Partisan\'s Technique'},
+    Lorelai:{A:'Fish Food',B:'Splashdown',C:'Waterwall',Perk:'That\'s Swell'},
     Lyra:{A:'Imperial Sigil',B:'Bright Bulwark',C:'Arcane Passage',Perk:'Principle Arcanum'},
     Ozo:{A:'Three-Ring Circus',B:'Acrobounce',C:'Bangarang',Perk:'Carnie Luck'},
     Petal:{A:'Bramblebloom Seeds',B:'Trampoline',C:'Spontaneous Combustion',Perk:'Munions'},
@@ -33,5 +34,6 @@ window.VaingloryHeroData = {
     Skaarf:{A:'Spitfire',B:'Goop',C:'Dragon Breath',Perk:'Fan the Flames'},
     Skye:{A:'Forward Barrage',B:'Suri Strike',C:'Death From Above',Perk:'Target Lock'},
     Taka:{A:'Kaiten',B:'Kaku',C:'X-Retsu',Perk:'House Kamuha'},
+    Varya:{A:'Stormforged Spear',B:'Arc Recursion',C:'Anvil\'s Hammer',Perk:'Chain Lightning'},
     Vox:{A:'Sonic Zoom',B:'Pulse',C:'Wait For It ...',Perk:'Julia\'s Song'}
 };
