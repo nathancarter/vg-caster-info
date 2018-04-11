@@ -105,7 +105,7 @@
         function addHero ( isLeft, heroName, event ) {
             event.preventDefault();
             var heroCard = createHeroElement( heroName );
-            if ( !heroOnTeam( isLeft, heroName ) && ( teamSize( isLeft ) < 3 ) )
+            if ( !heroOnTeam( isLeft, heroName ) && ( teamSize( isLeft ) < 5 ) )
                 document.getElementById( isLeft ? 'leftContainer' : 'rightContainer' )
                     .appendChild( heroCard );
         }
