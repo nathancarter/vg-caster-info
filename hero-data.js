@@ -34,6 +34,7 @@ window.VaingloryHeroData = {
     Skaarf:{A:'Spitfire',B:'Goop',C:'Dragon Breath',Perk:'Fan the Flames'},
     Skye:{A:'Forward Barrage',B:'Suri Strike',C:'Death From Above',Perk:'Target Lock'},
     Taka:{A:'Kaiten',B:'Kaku',C:'X-Retsu',Perk:'House Kamuha'},
+    Tony:{A:'Jawbreaker',B:'Trash Talk',C:'Bada Boom',Perk:'Come At Me'},
     Varya:{A:'Stormforged Spear',B:'Arc Recursion',C:'Anvil\'s Hammer',Perk:'Chain Lightning'},
     Vox:{A:'Sonic Zoom',B:'Pulse',C:'Wait For It ...',Perk:'Julia\'s Song'}
 };
