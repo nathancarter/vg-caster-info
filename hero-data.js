@@ -22,6 +22,7 @@ window.VaingloryHeroData = {
     Lance:{A:'Impale',B:'Gythian wall',C:'Combat Roll',Perk:'Partisan\'s Technique'},
     Lorelai:{A:'Fish Food',B:'Splashdown',C:'Waterwall',Perk:'That\'s Swell'},
     Lyra:{A:'Imperial Sigil',B:'Bright Bulwark',C:'Arcane Passage',Perk:'Principle Arcanum'},
+    Malene:{A:'Light Ribbons / Shadow Tendrils',B:'Royal Amnesty / Wicked Escapade',C:'Enchanted Transformation',Perk:'Masked Ball'},
     Ozo:{A:'Three-Ring Circus',B:'Acrobounce',C:'Bangarang',Perk:'Carnie Luck'},
     Petal:{A:'Bramblebloom Seeds',B:'Trampoline',C:'Spontaneous Combustion',Perk:'Munions'},
     Phinn:{A:'Quibble',B:'Polite Company',C:'Forced Accord',Perk:'Unstoppable'},
