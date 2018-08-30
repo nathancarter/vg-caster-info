@@ -1,5 +1,6 @@
 window.VaingloryHeroData = {
     Adagio:{A:'Gift of Fire',B:'Agent Of Wrath',C:'Verse of Judgement',Perk:'Arcane Renewal'},
+    Anka:{A:'Shimmer Blade',B:'Dance of Blades',C:'Mirage',Perk:'Gythian Promise'},
     Alpha:{A:'Prime Directive',B:'Core Charge',C:'Termination Protocol',Perk:'Infinite Reboot'},
     Ardan:{A:'Vanguard',B:'Blood for Blood',C:'Gauntlet',Perk:'Julia\'s Gift'},
     Baron:{A:'Porcupine Mortar',B:'Jump Jets',C:'Ion Cannon',Perk:'Rocket Launcher'},
@@ -16,6 +17,7 @@ window.VaingloryHeroData = {
     Gwen:{A:'Buckshot Bonanza',B:'Skedaddle',C:'Aces High',Perk:'Boomstick'},
     Idris:{A:'Shroudstep',B:'Chakram',C:'Shimmer Strike',Perk:'Divergent Paths'},
     Joule:{A:'Rocket Leap',B:'Thunder Strike',C:'Big Red Button',Perk:'Heavy Plating'},
+    Kensei:{A:'Lotus Strike',B:'Kensho',C:'Path of the Ronin',Perk:'Immovable Mind'},
     Kestrel:{A:'Glimmershot',B:'Active Camo',C:'One Shot One Kill',Perk:'Adrenaline'},
     Koshka:{A:'Pouncy Fun',B:'Twirly Death',C:'Yummy Catnip Frenzy',Perk:'Bloodrush'},
     Krul:{A:'Dead Man\'s Rush',B:'Smite',C:'From Hell\'s Heart',Perk:'Shadows Empower Me'},
@@ -32,6 +34,7 @@ window.VaingloryHeroData = {
     Rona:{A:'Into the Fray',B:'Foesplitter',C:'Red Mist',Perk:'Berserkers\' Fury'},
     Samuel:{A:'Malice & Verdict',B:'Drifting Dark',C:'Oblivion',Perk:'Corrupted Genius'},
     SAW:{A:'Roadie Run',B:'Suppressing Fire',C:'Mad Cannon',Perk:'Spin Up'},
+    Silvernail:{A:'Stake',B:'Caustic Blessing',C:'Rebuke',Perk:'Double Shot'},
     Skaarf:{A:'Spitfire',B:'Goop',C:'Dragon Breath',Perk:'Fan the Flames'},
     Skye:{A:'Forward Barrage',B:'Suri Strike',C:'Death From Above',Perk:'Target Lock'},
     Taka:{A:'Kaiten',B:'Kaku',C:'X-Retsu',Perk:'House Kamuha'},
