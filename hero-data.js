@@ -40,5 +40,6 @@ window.VaingloryHeroData = {
     Taka:{A:'Kaiten',B:'Kaku',C:'X-Retsu',Perk:'House Kamuha'},
     Tony:{A:'Jawbreaker',B:'Trash Talk',C:'Bada Boom',Perk:'Come At Me'},
     Varya:{A:'Stormforged Spear',B:'Arc Recursion',C:'Anvil\'s Hammer',Perk:'Chain Lightning'},
-    Vox:{A:'Sonic Zoom',B:'Pulse',C:'Wait For It ...',Perk:'Julia\'s Song'}
+    Vox:{A:'Sonic Zoom',B:'Pulse',C:'Wait For It ...',Perk:'Julia\'s Song'},
+    Yates:{A:'Wolf\'s Maw',B:'Overwhelm',C:'Iron Mandate',Perk:'Devastation Flail'}
 };
